@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <style>
+    .main{
+        display:flex;
+        width: 100%;
+        max-width: 800px;
+        height: 350px;
+        border: 2px solid #000000;
+     } 
+    model-viewer {
+        width: 60%;
+        height: 100%;
+        background-color: grey;   
+    }
+    
+    .QR{
+        width: 40%;
+        height: 100%;
+        text-align:center
+    }
+    .QR img{
+        width:140px;
+        height:140px;
+    }
+    </style>
+    
+</head>
+<body>
+    <h2>これはデモです。実物とは関係ありません</h2>
+    <hr>
+    <div class ="main">
+        <model-viewer ar
+                  ar-modes="scene-viewer webxr quick-look"
+                  src="./demo.glb"
+                  auto-rotate
+                  camera-controls>
+        </model-viewer>
+        <div class ="QR">
+            <img src="./QR.png">
+            <p>AR表示はこちらから</p>
+        </div>
+     </div>
+    <br>
+
+</body>
+</html>
